@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables In JS</title>
+  </head>
+  <body>
+    <h1>Variables In JS</h1>
+    <p>
+      Variables are containers for storing information. Creating a variable in
+      JavaScript is called "declaring" a variable: var carName; After the
+      declaration, the variable is empty (it has no value).
+    </p>
+
+    <ul>
+      <li>
+        Variable names must start with a letter, an underscore ( _ ) or a dollar
+        sign ( $ ).
+      </li>
+
+      <li>Variable names cannot contain spaces.</li>
+
+      <li>
+        Variables cannot be the same as reserved keywords such as if or const.
+      </li>
+      <li>
+        By convention, JavaScript variable names are written in camelCase.
+      </li>
+    </ul>
+    <script>
+      // Variables In JS
+
+      // We have Three types of Variables
+
+      // 1. Var
+
+      // =>  It was used before ES6
+
+      var a = 10; // Initialization and Declaration
+      var a = 20; // Re-declaration is possible
+      a = 30; // Re-assignment is possible
+      console.log(a);
+
+      // 2. let
+
+      let name = "daivikraj"; // Initialization and Declaration
+      // let name = "Harpal Patel";     // Re-declaration is not possible
+      name = "daivikrajsinh vaghela"; // Re-assignment is possible
+      console.log(name);
+
+      // 3. const
+
+      const favActress = "Anushka"; // Initialization and Declaration
+      const fav_actress = "Alia";   // Re-declaration is not possible
+      fav_actress = "Deepika";       // Re-assignment is not possible
+      console.log(fav_actress);
+    </script>
+  </body>
+</html>

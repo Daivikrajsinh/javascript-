@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Types in JS</title>
+  </head>
+  <body>
+    <h1>Data Types in JS</h1>
+
+    <p>We have Two Types OF Data Types</p>
+    <ol>
+      <li>Primitive Data Type</li>
+      <ul>
+        <li>Number</li>
+        <li>Null</li>
+        <li>Boolean</li>
+        <li>BigInt</li>
+        <li>String</li>
+        <li>Symbol</li>
+        <li>Undefined</li>
+      </ul>
+      <li>Non-Primitive Data Type</li>
+      <ul>
+        <li>Array</li>
+        <li>Object</li>
+      </ul>
+    </ol>
+
+    <script>
+      // Data Type
+
+      // Primitive Data Type
+
+      // 1. Number
+
+      let a = 10;
+      console.log(a);
+      console.log(typeof a);
+
+      // 2. Null
+
+      let b = null;
+      console.log(b);
+      console.log(typeof b);
+
+      // 3. Boolean
+
+      let c = false;
+      console.log(c);
+      console.log(typeof c);
+
+      // 4. BigInt
+
+      let d = 545155455454545n;
+      console.log(d);
+      console.log(typeof d);
+
+      // 5. String
+
+      let e = "Namaste";
+      // let e = 'Namaste';
+      // let e = `Namaste`;
+      // let e  = "Hello, This is a 'Boy' and his name is Rahul"
+      // let e  = `Hello, This is a 'Boy' and his name is "Rahul".`
+      console.log(e);
+      console.log(typeof e);
+
+      // 6. Symbol
+
+      let f = Symbol("hey");
+      console.log(f);
+      console.log(typeof f);
+
+      // 7. Undefined
+
+      let g;
+      console.log(g);
+      console.log(typeof g);
+
+      // Non-Primitive Data Types
+
+      // 1. Array
+
+      let arr = [10, "chetan", true, [10, 20, 30, 40, 50]];
+      console.log(arr);
+      // console.log(typeof arr);
+      console.log(arr[0]);
+      console.log(arr[1]);
+      console.log(arr[2]);
+      console.log(arr[3]);
+      console.log(arr[4]); // undefined
+      console.log(arr.length);
+
+      // 2. Object
+
+      let obj = {
+        name: "harpal",
+        contact: 12121212,
+        isLoggedIn: true,
+      };
+
+      console.log(obj);
+      console.log(obj.name);
+      console.log(obj.contact);
+      console.log(obj.isLoggedIn);
+      console.log(typeof obj);
+      
+      
+    </script>
+  </body>
+</html>

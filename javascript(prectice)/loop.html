@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop In JS</title>
+  </head>
+  <body style="background-color: black; color: aliceblue;" >
+    <h1>Loop In JS</h1>
+    <p>
+      The main difference between an entry control loop and an exit control loop
+      is when the test condition is evaluated:
+    </p>
+    <h2>Entry control loop</h2>
+    <p>
+      The test condition is evaluated before the loop body is executed. This
+      type of loop is also known as a pre-checking loop. Examples of entry
+      control loops include the for and while loops.
+    </p>
+    <h2>Exit control loop</h2>
+    <p>
+      The test condition is evaluated after the loop body is executed. This type
+      of loop is also known as a post-checking loop. An example of an exit
+      control loop is the do-while loop.
+    </p>
+    <hr>
+    <!-- <img src="../../Images/loop.png" alt=""> -->
+    <script>
+      // Loop In JS
+      // Basically we have THree type of loop
+      // 1. for loop
+      // Syntax
+      //   for (Initilization; condition; progress / process) {
+      //     // code to be executed
+      //   }
+      // Manually we write like this
+      //   console.log("Namaste Bharat");
+      //   console.log("Namaste Bharat");
+      //   console.log("Namaste Bharat");
+      //   console.log("Namaste Bharat");
+      //   console.log("Namaste Bharat");
+      //   console.log("Namaste Bharat");
+      //   console.log("Namaste Bharat");
+      // In for Loop
+      //   for (let i = 1; i <= 10; i++) {
+      //     // console.log("Namaste Bharat");
+      //     console.log(i);
+      //   }
+      // 2. while loop
+      // Syntax
+      //   while (condition) {
+      //     //  code to be executed
+      //   }
+      //   let i = 1;
+      //   while (i <= 10) {
+      //     console.log(i + " In While Loop");
+      //     i++;
+      //   }
+      // 3. do while loop
+      //  Syntax
+      //   do {
+      //     //  code to be executed
+      //   } while (condition);
+      let i = 17;
+      do {
+        console.log(`${i} In Do While Loop`);
+        i--;
+      } while (i >= 1);
+      
+    </script>
+  </body>
+</html>
