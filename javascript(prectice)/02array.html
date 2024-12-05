@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array In JS</title>
+  </head>
+  <body style="background-color: gray">
+    <h1>Array In JS</h1>
+    <p>
+      An array in JavaScript is a type of global object used to store data.
+      Arrays can store multiple values in a single variable, which can condense
+      and organize our code
+    </p>
+
+    <script>
+      // Array
+
+      let arr = [10, 20, 30, "Daivik", true];
+
+      //   console.log(arr);
+      //   console.log(typeof arr);
+      //   console.log(arr.length);
+      //   console.log(arr[0]);
+      //   console.log(arr[1]);
+      //   console.log(arr[2]);
+      //   console.log(arr[3]);
+      //   console.log(arr[4]);
+      //   console.log(arr[5]); // undefined
+
+      //   Loop -> any loop
+
+      //   arr.forEach((element) => {
+      //     console.log(element);
+      //   });
+
+      //   console.log(arr.push(100)); // 6
+      //   console.log(arr); // arr = [10, 20, 30, "Daivik", true, 100]
+      //   console.log(arr.pop()); // 100
+      //   console.log(arr);
+      //   console.log(arr.shift());
+      //   console.log(arr);
+      //   console.log(arr.unshift(500));
+      //   console.log(arr);
+
+      //   convert in string
+
+      //   console.log(arr.toString());
+      //   console.log(arr.reverse());
+      //   console.log(arr.indexOf(30)); // 2
+      //   console.log(arr.includes(30));
+      //   console.log(arr);
+      //   console.log(arr.slice(2, 4));
+      //   console.log(arr);
+
+      //   console.log(arr.splice(0, 2));
+      //   console.log(arr);
+
+      let marks = [1,2,3,4,5,6,7,8,9,10];
+
+      //   map function
+
+      //   marks.map((ele) => {
+      //     console.log(ele);
+      //   });
+
+      //   filter function
+
+      const evenNumber = marks.filter((e) => e % 2 === 0);
+      console.log(evenNumber);
+      const oddNumber = marks.filter((e) => e % 2 !== 0);
+      console.log(oddNumber);
+    </script>
+  </body>
+</html>
