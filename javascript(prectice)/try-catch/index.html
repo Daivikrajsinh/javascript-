@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      Email<input
+        id="email"
+        type="email"
+        placeholder="Enter your email"
+        onblur="emailValidation()"
+      />
+      <p id="error1"></p>
+      <br />
+      <br />
+      password
+      <input
+        id="password"
+        type="password"
+        placeholder="enter your password"
+        onblur="passwordValidation()"
+      />
+      <p id="error2"></p>
+      <button id="btn" type="submit">Submit</button>
+    </form>
+    <script>
+      function emailValidation() {
+        let email = document.querySelector("#email").value;
+        let error1 = document.querySelector("#error1");
+        if (email == "") {
+          error1.textContent = "please fill email first";
+          error1.style.color = "red";
+          return;
+        }
+      }
+      function passwordValidation() {
+        let password = document.querySelector("#password").value;
+        let error2 = document.querySelector("#error2");
+        if (password == "") {
+          error2.textContent = "please fill first your  password";
+          error2.style.color = "red";
+          return;
+        }
+      }
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        alert("hello from anonymous function")
+      });
+    </script>
+  </body>
+</html>

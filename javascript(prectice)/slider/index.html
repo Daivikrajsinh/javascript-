@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <h2 id="text"></h2>
+    <img id="imageShow" src="https://m.media-amazon.com/images/I/8157jzWk-8L._SX522_.jpg" alt="">
+    <button id="back">back</button>
+    <button id="next">next</button>
+  </body>
+  <script>
+    let array = ["javscript", "css", "mongodb", "bootstrap"];
+    let count = 0;
+    let nextBtn = document.getElementById("next");
+    let backBtn = document.getElementById("back");
+    nextBtn.addEventListener("click", () => {
+
+      if (count == array.length - 1) {
+        count = 0;
+      }else{
+        count++
+      }
+
+      showData();
+    });
+    backBtn.addEventListener("click", () => {
+
+  if (count == 0) {
+    count = array.length - 1;
+  }else{
+    count--
+  }
+
+  showData();
+});
+    function showData() {
+      let text = document.querySelector("#text");
+      text.innerText = array[count];
+    //   image.src =array[count];
+      
+    }
+    showData();
+  </script>
+</html>

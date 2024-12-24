@@ -4,30 +4,35 @@ let numbers = [1, 2, 3, 4, 5];
 for (let i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
 }
+   console.log(numbers[i]);
 
 
 // question-2
 
 const array = [10, 20, 30, 40, 50];
 let index = 0;
-while (i < array.length) {
-    console.log(array[i]); i++;
+while (i < array.length) {    
 }
+  console.log(array[i]); i++;
 
 
 // question-3
 let str = "hello,world!";
 for (let i = 0; i < str.length; i++) {
-    console.log(str[i])
+    
 }
+   console.log(str[i])
+
 
 //  question-4
 let string = "JavaScript";
 
 for (let i = 0; i < str.length; i++) {
-    console.log(string[i]);
+   
 }
+  console.log(string[i]);
 
+  
 // question-5
 let numbers5 = [1, 2, 3, 4, 5];
 let sum = 0;
@@ -64,8 +69,9 @@ let upperCaseGreeting = "";
 
 for (let i = 0; i < greeting.length; i++) {
     upperCaseGreeting += greeting[i].toUpperCase();
-    console.log(upperCaseGreeting);
+   
 }
+  console.log(upperCaseGreeting);
 
 
 
@@ -79,7 +85,7 @@ while (i < numbers9.length) {
     i++;
 
 }
-console.log(count);
+ console.log(count);
 
 
 // question-10
@@ -111,8 +117,9 @@ let totalLength = 0;
 
 for (let i = 0; i < fruits.length; i++) {
     totalLength += fruits[i].length;
-    console.log(totalLength);
+  
 }
+   console.log(totalLength);
 
 
 // question-13
@@ -122,7 +129,6 @@ let concatenatedString = "";
 for (let i = 0; i < words.length; i++) {
     concatenatedString += words[i] + " ";
 
-
-    console.log(concatenatedString);
 }
+    console.log(concatenatedString);
 
