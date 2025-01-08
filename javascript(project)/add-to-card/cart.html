@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart-page</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav {
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(6, 49, 49);
+
+        /* border: 3px solid black; */
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+
+    /* li a {
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+    } */
+
+    li a {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        /* letter-spacing: 3px; */
+        font-weight: 600;
+        font-size: x-large;
+    }
+
+    /* .home-page {
+        height: 95vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-around;
+        background-color:grey;
+
+      
+
+    } */
+
+    .home-page {
+        height: 100vh;
+        width: 100%;
+        /* margin: auto; */
+        display: flex;
+        gap: 150px;
+        /* flex-wrap: wrap; */
+        justify-content: space-evenly;
+        /* justify-content: center; */
+        /* padding-top: 50px; */
+        /* margin-top: auto; */
+        flex-wrap: wrap;
+        /* background-color: rgb(212, 172, 119); */
+        /* border: 2px solid red; */
+        background-color:grey;
+    }
+
+    .home-page>div>h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 90%;
+        height: 2.0rem;
+        margin: 20px auto;
+        white-space: nowrap;
+        /* border: 3px solid black; */
+
+    }
+
+    .home-page>div {
+        height: 345px ;
+        width: 200px;
+        margin-top: 50px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        /* border: 1px solid red; */
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    /* .home-page>div>img {
+        height: 200px;
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+
+
+    } */
+
+    .home-page>div>img {
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .home-page>div>button {
+        cursor: pointer;
+        padding: 5px;
+        background-color: rgb(139, 62, 62);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .home-page>div>p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="cart.html">cart</a></li>
+                <!-- <li><a href="login.html">login</a></li> -->
+                <!-- <li><a href="login.html">log out</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="home-page">
+
+        </div>
+    </main>
+</body>
+<script>
+
+    let data = JSON.parse(localStorage.getItem("item-cart")) || [];
+
+    let homepage = document.querySelector(".home-page");
+
+    let rendringfunction = () => {
+
+        homepage.innerHTML = ""
+        data.forEach((element, index) => {
+            let cardDiv = document.createElement("div");
+
+            let img = document.createElement("img")
+            img.src = "https://images-eu.ssl-images-amazon.com/images/G/31/img19/OOC/Gateway/ohl/halo/SBC/Kitchen-Appliances.png"
+
+            let h4 = document.createElement("h4");
+            h4.innerText = element.title;
+
+            let p = document.createElement("p");
+            p.innerText = element.price;
+
+            let addbtn = document.createElement("button");
+            addbtn.innerText = "remove"
+
+            addbtn.onclick = () => {
+                addhendler(index);
+            }
+
+            cardDiv.append(img, h4, p, addbtn);
+
+            homepage.append(cardDiv);
+
+        });
+    }
+
+    let addhendler = (index) => {
+        data.splice(index, 1);
+        localStorage.setItem("item-cart", JSON.stringify(data));
+        rendringfunction();
+    }
+
+    rendringfunction();
+
+</script>
+
+</html>
